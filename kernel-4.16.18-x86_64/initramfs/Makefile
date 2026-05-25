@@ -49,7 +49,7 @@ $(INITRAMFS_CPIO): | $(BUSYBOX_DIR)/$(INSTALL_DIR)
 ##################################################################
 $(BUSYBOX_DIR)/$(INSTALL_DIR): | $(BUSYBOX_DIR)
 	cd $(BUSYBOX_DIR) && \
-	make ARCH=$(BUSYBOX_ARCH) menuconfig && \
+	#make ARCH=$(BUSYBOX_ARCH) menuconfig && \
 	make ARCH=$(BUSYBOX_ARCH) -j$(BUILD_JOBS) && \
 	make ARCH=$(BUSYBOX_ARCH) install
 

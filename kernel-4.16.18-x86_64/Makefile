@@ -81,13 +81,13 @@ $(LINUX_DIR)/$(LINUX_SYSTEM_MAP): | $(LINUX_DIR)
 	make ARCH=$(LINUX_ARCH) -j$(BUILD_JOBS) && \
 	make ARCH=$(LINUX_ARCH) INSTALL_MOD_PATH=$(ROOTDIR)/$(INITRAMFS_DIR)/build modules_install
 
-$(LINUX_DIR): $(CONFIG_DIR)/$(LINUX_ARCHIVE) $(CONFIG_DIR)/linux-config
+$(LINUX_DIR): #$(CONFIG_DIR)/$(LINUX_ARCHIVE) #$(CONFIG_DIR)/linux-config
 	mkdir -p $(LINUX_DIR)
-	tar --strip 1 -xvf $< -C $(LINUX_DIR)
-	cp -f $(CONFIG_DIR)/linux-config $(LINUX_DIR)/.config
+	#tar --strip 1 -xvf $< -C $(LINUX_DIR)
+	#cp -f $(CONFIG_DIR)/linux-config $(LINUX_DIR)/.config
 
-$(CONFIG_DIR)/$(LINUX_ARCHIVE):
-	wget $(LINUX_URL)/$(LINUX_ARCHIVE) -O $@
+#$(CONFIG_DIR)/$(LINUX_ARCHIVE):
+#	wget $(LINUX_URL)/$(LINUX_ARCHIVE) -O $@
 
 
 ##################################################################

@@ -10,7 +10,7 @@ INSTALL_DIR=$(ROOTDIR)/initramfs/build
 export ARCH=$(LINUX_ARCH)
 
 # Path to current linux kernel rootdir
-LINUX_HEADERS=$(ROOTDIR)/linux-$(LINUX_VERSION)
+LINUX_HEADERS=$(ROOTDIR)/linux-6.18
 
 
 obj-m += my_module.o
